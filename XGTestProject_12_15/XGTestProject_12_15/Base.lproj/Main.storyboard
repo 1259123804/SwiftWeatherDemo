@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XGTestProject_12_15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dov-pl-SBA">
+                                <state key="normal" title="获取天气信息"/>
+                                <connections>
+                                    <action selector="getWeatherClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhk-Zl-rd6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzf-g5-qKe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.31764705879999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2J-g6-uuG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7yS-1i-aRa"/>
+                                    <constraint firstAttribute="width" constant="150" id="dl3-RS-x31"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H2J-g6-uuG" firstAttribute="centerX" secondItem="dov-pl-SBA" secondAttribute="centerX" id="X8I-EG-EXC"/>
+                            <constraint firstItem="rzf-g5-qKe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bgO-To-Zg7"/>
+                            <constraint firstItem="rzf-g5-qKe" firstAttribute="centerX" secondItem="dov-pl-SBA" secondAttribute="centerX" id="fOz-Av-3AK"/>
+                            <constraint firstItem="dov-pl-SBA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i0f-ej-4JR"/>
+                            <constraint firstItem="dov-pl-SBA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="rmM-7U-zMN"/>
+                            <constraint firstItem="rzf-g5-qKe" firstAttribute="top" secondItem="dov-pl-SBA" secondAttribute="bottom" constant="65" id="vwL-Sh-hw9"/>
+                            <constraint firstItem="H2J-g6-uuG" firstAttribute="top" secondItem="dov-pl-SBA" secondAttribute="bottom" constant="19" id="xZX-Ey-0nn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTF" destination="H2J-g6-uuG" id="wIj-Ef-ytm"/>
+                        <outlet property="getWeatherBtn" destination="dov-pl-SBA" id="Ebc-9y-fuf"/>
+                        <outlet property="weatherLabel" destination="rzf-g5-qKe" id="S85-r8-Ayh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
